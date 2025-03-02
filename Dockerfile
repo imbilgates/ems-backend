@@ -5,7 +5,7 @@ FROM maven:3.9.4-eclipse-temurin-21 AS build
 WORKDIR /src
 
 # Copy the entire project (including src and pom.xml) to the build container
-COPY employeeCRUD/ .
+COPY . .
 
 # Build the project and skip tests
 RUN mvn clean package -DskipTests
